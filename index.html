@@ -19,13 +19,19 @@
 			var str;
 			str = prompt("宝宝输入你的名字,有惊喜！");
 			console.log(str);
+			while(str != "张远星" && str != "yuanxing"){
+				str = prompt("哼哼~输入别的可没用！要输入正确的名字哦！");
+				console.log(str);
+			}
 			window.onload = function() {
-				if (str != null && str !="") {
-					//document.getElementById("ai").innerHTML=str;
-					var all = document.getElementsByClassName("ai"); //返回的是数组
-					for (var i = 0; i < all.length; i++) {
-						all[i].innerHTML = str;
-					}
+				document.getElementById("main").style.display="none";
+				//document.getElementById("clock-box").style.display="none";
+				document.getElementById("main").style.display="block";
+				//document.getElementById("clock-box").style.display="block";
+				//document.getElementById("ai").innerHTML=str;
+				var all = document.getElementsByClassName("ai"); //返回的是数组
+				for (var i = 0; i < all.length; i++) {
+					all[i].innerHTML = str;
 				}
 			}
 		</script>
